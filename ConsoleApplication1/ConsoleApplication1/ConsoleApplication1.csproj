@@ -41,18 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Ant.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Circus.cs" />
-    <Compile Include="Elephant.cs" />
-    <Compile Include="Giraffe.cs" />
-    <Compile Include="ICircus.cs" />
-    <Compile Include="IZoo.cs" />
-    <Compile Include="Pony.cs" />
+    <Compile Include="Animal\Animal.cs" />
+    <Compile Include="Animal\Species\Ant.cs" />
+    <Compile Include="Animal\Species\Cat.cs" />
+    <Compile Include="Circus\Circus.cs" />
+    <Compile Include="Animal\Species\Elephant.cs" />
+    <Compile Include="Animal\Species\Giraffe.cs" />
+    <Compile Include="Circus\ICircus.cs" />
+    <Compile Include="Zoo\IZoo.cs" />
+    <Compile Include="Animal\Species\Pony.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Zoo.cs" />
+    <Compile Include="Zoo\Zoo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
