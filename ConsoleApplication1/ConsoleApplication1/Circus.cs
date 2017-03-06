@@ -8,8 +8,8 @@ namespace ConsoleApplication1
 {
     class Circus : ICircus
     {
-        public List<Animal> Animals;
-        string Name;
+        public List<Animal> Animals = new List<Animal>();
+        public string Name = "This circus has no name";
 
         public string AnimalsIntroduction()
         {
