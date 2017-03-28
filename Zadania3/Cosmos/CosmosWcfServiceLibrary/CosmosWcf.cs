@@ -51,6 +51,7 @@ namespace CosmosWcfServiceLibrary
             {
                 _systems.Add(new SpaceSystem()
                 {
+                    Name = "system" + i,
                     BaseDistance = random.Next(20, 120),
                     MinShipPower = random.Next(10, 40),
                     Gold = random.Next(3000, 7000)
