@@ -52,7 +52,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\CosmicAdventureDTO.csproj">
+    <ProjectReference Include="..\CosmicAdventureDTO\CosmicAdventureDTO.csproj">
       <Project>{f22c7183-9fdd-41e6-afcf-f9777c738a8f}</Project>
       <Name>CosmicAdventureDTO</Name>
     </ProjectReference>
