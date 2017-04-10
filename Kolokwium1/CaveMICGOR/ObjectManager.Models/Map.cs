@@ -5,7 +5,7 @@ namespace ObjectManager.Models
     public class Map
     {
         public int Id;
-        public List<string> positions;
+        public List<string> Positions;
         public string SecretKey;
     }
 }

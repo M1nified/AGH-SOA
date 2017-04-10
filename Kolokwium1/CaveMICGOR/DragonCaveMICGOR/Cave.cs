@@ -44,7 +44,7 @@ namespace DragonCave
             for (int i = 0; i < 7; i++)
                 map.Add("*");            _mapObject = new Map()
             {
-                positions = map,
+                Positions = map,
                 SecretKey = @"LeGoLaSlOvE"
             };
         }

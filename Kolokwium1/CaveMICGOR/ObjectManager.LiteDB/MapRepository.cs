@@ -26,6 +26,16 @@ namespace ObjectManager.LiteDB
                 return map.Id;
             }
         }
+
+        public bool Delete(int mapId)
+        {
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Map>("maps");
+                return repository.Delete(mapId);
+            }
+        }
+
         public List<Map> FindAll()
         {
             using (var db = new LiteDatabase(_connection))

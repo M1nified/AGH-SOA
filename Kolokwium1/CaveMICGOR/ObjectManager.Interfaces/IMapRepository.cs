@@ -7,5 +7,6 @@ namespace ObjectManager.Interfaces
     {
         int Add(Map map);
         List<Map> FindAll();
+        bool Delete(int mapId);
     }
 }
