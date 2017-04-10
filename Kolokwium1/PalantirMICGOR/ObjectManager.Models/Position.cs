@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ObjectManager.Models
 {
-    public class Stats
+    public class Position
     {
-        public int Id;
-        public int PlayerId;
+        public string Name;
         public int Gold;
-        public List<string> items;
     }
 }

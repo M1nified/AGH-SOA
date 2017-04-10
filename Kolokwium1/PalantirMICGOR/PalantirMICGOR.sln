@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectManager.LiteDB", "ObjectManager.LiteDB\ObjectManager.LiteDB.csproj", "{9AE1B1F5-1C8C-4C1B-8EAC-1B318EC24DF3}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectManager.Models", "Obj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectManager.Interfaces", "ObjectManager.Interfaces\ObjectManager.Interfaces.csproj", "{2A18F584-449D-441C-9EE4-862AAC7DF35D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbitsWCF", "HobbitsWCF\HobbitsWCF.csproj", "{9F8FB2B7-D941-4841-80FA-D49BE41917DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalantirWCF", "HobbitsWCF\PalantirWCF.csproj", "{9F8FB2B7-D941-4841-80FA-D49BE41917DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

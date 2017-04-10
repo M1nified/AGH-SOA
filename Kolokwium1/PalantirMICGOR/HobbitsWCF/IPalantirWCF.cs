@@ -10,17 +10,12 @@ namespace HobbitsWCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IHobbits
+    public interface IPalantirWCF
     {
         [OperationContract]
-        int CreatePlayer(string name, string code);
-
+        void SetPlayerRank(string name, int gold);
         [OperationContract]
-        int GetPlayer(string name, string code);
-        [OperationContract]
-        string GetPlayerName(int id);
-        [OperationContract]
-        Stats GetPlayerStats(string name);
+        List<Position> GetRanks();
     }
 
 }

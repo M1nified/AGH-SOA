@@ -44,9 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseConnections.cs" />
-    <Compile Include="PlayersRepository.cs" />
+    <Compile Include="PostionsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

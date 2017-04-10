@@ -8,7 +8,6 @@ namespace ObjectManager.LiteDB
 {
     public class DatabaseConnections
     {
-        public static string PlayersConnection = @"tmp\players";
-        public static string StatsConnection = @"tmp\stats";
+        public static string PositionsConnection = @"tmp\positions";
     }
 }
