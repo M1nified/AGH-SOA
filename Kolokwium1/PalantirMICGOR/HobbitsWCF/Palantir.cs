@@ -10,24 +10,14 @@ namespace HobbitsWCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    public class Hobbits : IPalantirWCF
+    public class Palantir : IPalantirWCF
     {
-        public int CreatePlayer(string name, string code)
+        public List<Position> GetRanks()
         {
             throw new NotImplementedException();
         }
 
-        public int GetPlayer(string name, string code)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetPlayerName(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Position GetPlayerStats(string name)
+        public void SetPlayerRank(string name, int gold)
         {
             throw new NotImplementedException();
         }
