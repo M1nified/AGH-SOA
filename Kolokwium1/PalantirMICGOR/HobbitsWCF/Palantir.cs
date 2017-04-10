@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Text;
 using ObjectManager.Models;
+using ObjectManager.LiteDB;
+using System.Linq;
 
 namespace HobbitsWCF
 {
@@ -14,12 +12,16 @@ namespace HobbitsWCF
     {
         public List<Position> GetRanks()
         {
-            throw new NotImplementedException();
+            var repo = new PostionsRepository();
+            return repo.GetAll().OrderBy(x => x.Gold).ToList();
         }
 
         public void SetPlayerRank(string name, int gold)
         {
-            throw new NotImplementedException();
+            var repo = new PostionsRepository();
+            var position = repo.Get(name);
+            position.Gold = gold;
+            repo.Update(position);
         }
     }
 }
