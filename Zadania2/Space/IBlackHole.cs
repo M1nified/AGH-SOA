@@ -11,7 +11,7 @@ namespace Space
     public interface IBlackHole
     {
         [OperationContract]
-								Starship PullStarship(Starship ship);
+        Starship PullStarship(Starship ship);
         [OperationContract]
         string UltimateAnswer();
     }

@@ -233,7 +233,7 @@
       <wsa10:EndpointReference>
         <wsa10:Address>http://localhost/Temporary_Listen_Addresses/WCFTest/BlackHoleServiceEndpoint</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>AERO\m4x5474n</Upn>
+          <Upn>MOBI1\georg</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
