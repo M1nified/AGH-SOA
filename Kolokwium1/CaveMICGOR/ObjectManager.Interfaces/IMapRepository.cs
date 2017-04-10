@@ -1,9 +1,11 @@
 ﻿using ObjectManager.Models;
+using System.Collections.Generic;
 
 namespace ObjectManager.Interfaces
 {
     public interface IMapRepository
     {
-        int Add(Location treasure);
+        int Add(Map map);
+        List<Map> FindAll();
     }
 }
