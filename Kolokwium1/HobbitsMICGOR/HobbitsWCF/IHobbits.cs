@@ -14,7 +14,6 @@ namespace HobbitsWCF
     {
         [OperationContract]
         int CreatePlayer(string name, string code);
-
         [OperationContract]
         int GetPlayer(string name, string code);
         [OperationContract]

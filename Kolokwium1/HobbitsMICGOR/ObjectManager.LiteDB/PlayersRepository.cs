@@ -15,7 +15,11 @@ namespace ObjectManager.LiteDB
 
         public int Add(Player player)
         {
-            throw new NotImplementedException();
+            using(var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Player>("players");
+
+            }
         }
 
         public void Delete(int playerId)
