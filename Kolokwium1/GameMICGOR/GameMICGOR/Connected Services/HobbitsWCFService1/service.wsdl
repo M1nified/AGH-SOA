@@ -32,6 +32,12 @@
   <wsdl:message name="IHobbits_GetPlayerStats_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPlayerStatsResponse" />
   </wsdl:message>
+  <wsdl:message name="IHobbits_SetPlayerStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerStats" />
+  </wsdl:message>
+  <wsdl:message name="IHobbits_SetPlayerStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerStatsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IHobbits">
     <wsdl:operation name="CreatePlayer">
       <wsdl:input wsaw:Action="http://tempuri.org/IHobbits/CreatePlayer" message="tns:IHobbits_CreatePlayer_InputMessage" />
@@ -48,6 +54,10 @@
     <wsdl:operation name="GetPlayerStats">
       <wsdl:input wsaw:Action="http://tempuri.org/IHobbits/GetPlayerStats" message="tns:IHobbits_GetPlayerStats_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHobbits/GetPlayerStatsResponse" message="tns:IHobbits_GetPlayerStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHobbits/SetPlayerStats" message="tns:IHobbits_SetPlayerStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHobbits/SetPlayerStatsResponse" message="tns:IHobbits_SetPlayerStats_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IHobbits" type="tns:IHobbits">
@@ -81,6 +91,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetPlayerStats">
       <soap:operation soapAction="http://tempuri.org/IHobbits/GetPlayerStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerStats">
+      <soap:operation soapAction="http://tempuri.org/IHobbits/SetPlayerStats" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

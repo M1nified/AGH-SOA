@@ -59,4 +59,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SetPlayerStats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ObjectManager.Models" minOccurs="0" name="stats" nillable="true" type="q2:Stats" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPlayerStatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ObjectManager.Models" minOccurs="0" name="SetPlayerStatsResult" nillable="true" type="q3:Stats" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

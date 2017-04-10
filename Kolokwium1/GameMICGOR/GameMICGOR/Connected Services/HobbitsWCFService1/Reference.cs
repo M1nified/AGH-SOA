@@ -133,6 +133,12 @@ namespace GameMICGOR.HobbitsWCFService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHobbits/GetPlayerStats", ReplyAction="http://tempuri.org/IHobbits/GetPlayerStatsResponse")]
         System.Threading.Tasks.Task<GameMICGOR.HobbitsWCFService1.Stats> GetPlayerStatsAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHobbits/SetPlayerStats", ReplyAction="http://tempuri.org/IHobbits/SetPlayerStatsResponse")]
+        GameMICGOR.HobbitsWCFService1.Stats SetPlayerStats(string name, GameMICGOR.HobbitsWCFService1.Stats stats);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHobbits/SetPlayerStats", ReplyAction="http://tempuri.org/IHobbits/SetPlayerStatsResponse")]
+        System.Threading.Tasks.Task<GameMICGOR.HobbitsWCFService1.Stats> SetPlayerStatsAsync(string name, GameMICGOR.HobbitsWCFService1.Stats stats);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -192,6 +198,14 @@ namespace GameMICGOR.HobbitsWCFService1 {
         
         public System.Threading.Tasks.Task<GameMICGOR.HobbitsWCFService1.Stats> GetPlayerStatsAsync(string name) {
             return base.Channel.GetPlayerStatsAsync(name);
+        }
+        
+        public GameMICGOR.HobbitsWCFService1.Stats SetPlayerStats(string name, GameMICGOR.HobbitsWCFService1.Stats stats) {
+            return base.Channel.SetPlayerStats(name, stats);
+        }
+        
+        public System.Threading.Tasks.Task<GameMICGOR.HobbitsWCFService1.Stats> SetPlayerStatsAsync(string name, GameMICGOR.HobbitsWCFService1.Stats stats) {
+            return base.Channel.SetPlayerStatsAsync(name, stats);
         }
     }
 }

@@ -20,6 +20,7 @@ namespace GameMICGOR
         private static string playerCode;
         private static int playerId;
         private static string playerName;
+        private static Stats playerStats;
         private static Location currentLocation;
         static void Main(string[] args)
         {
@@ -28,6 +29,7 @@ namespace GameMICGOR
             playerCode = Console.ReadLine();
             playerId = hobbits.CreatePlayer(playerName, playerCode);
             currentLocation = cave.Init(playerName);
+            playerStats = hobbits.GetPlayerStats(playerName);
             while (true)
             {
                 DisplayMenu();
@@ -98,6 +100,11 @@ namespace GameMICGOR
             if (currentLocation.Center == "zloto")
             {
                 var treasure = dragonCave.GetLoot();
+                playerStats.Gold += treasure.Gold;
+                var items = playerStats.items.ToList();
+                items.Add(treasure.Item);
+                playerStats.items = items.ToArray();
+                hobbits.SetPlayerStats(playerName, playerStats);
             }
             else if (currentLocation.Center == "klucz")
             {
