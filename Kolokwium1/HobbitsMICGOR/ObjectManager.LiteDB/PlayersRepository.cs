@@ -18,23 +18,39 @@ namespace ObjectManager.LiteDB
             using(var db = new LiteDatabase(_connection))
             {
                 var repository = db.GetCollection<Player>("players");
-
+                if (repository.FindById(player.Id) != null)
+                    repository.Update(player);
+                else
+                    repository.Insert(player);
+                return player.Id;
             }
         }
 
-        public void Delete(int playerId)
+        public bool Delete(int playerId)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Player>("players");
+                return repository.Delete(playerId);
+            }
         }
 
-        public int Get(int playerId)
+        public Player Get(int playerId)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Player>("players");
+                return repository.FindById(playerId);
+            }
         }
 
-        public int Update(Player player)
+        public bool Update(Player player)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Player>("players");
+                return repository.Update(player);
+            }
         }
     }
 }

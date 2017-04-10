@@ -5,9 +5,9 @@ namespace ObjectManager.Interfaces
     public interface IStatsRepository
     {
         int Add(Stats stats);
-        int Get(int statsId);
-        int Update(Stats stats);
-        void Delete(int statsId);
+        Stats Get(int statsId);
+        bool Update(Stats stats);
+        bool Delete(int statsId);
 
     }
 }

@@ -5,8 +5,8 @@ namespace ObjectManager.Interfaces
     public interface IPlayersRepository
     {
         int Add(Player player);
-        int Get(int playerId);
-        int Update(Player player);
-        void Delete(int playerId);
+        Player Get(int playerId);
+        bool Update(Player player);
+        bool Delete(int playerId);
     }
 }

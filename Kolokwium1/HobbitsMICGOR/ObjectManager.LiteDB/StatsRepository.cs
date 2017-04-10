@@ -1,4 +1,5 @@
-﻿using ObjectManager.Interfaces;
+﻿using LiteDB;
+using ObjectManager.Interfaces;
 using ObjectManager.Models;
 using System;
 
@@ -10,22 +11,42 @@ namespace ObjectManager.LiteDB
 
         public int Add(Stats stats)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Stats>("stats");
+                if (repository.FindById(stats.Id) != null)
+                    repository.Update(stats);
+                else
+                    repository.Insert(stats);
+                return stats.Id;
+            }
         }
 
-        public void Delete(int statsId)
+        public bool Delete(int statsId)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Stats>("stats");
+                return repository.Delete(statsId);
+            }
         }
 
-        public int Get(int statsId)
+        public Stats Get(int statsId)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Stats>("stats");
+                return repository.FindById(statsId);
+            }
         }
 
-        public int Update(Stats stats)
+        public bool Update(Stats stats)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDatabase(_connection))
+            {
+                var repository = db.GetCollection<Stats>("stats");
+                return repository.Update(stats);
+            }
         }
     }
 }
