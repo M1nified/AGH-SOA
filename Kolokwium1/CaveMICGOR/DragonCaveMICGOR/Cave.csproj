@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Cave.cs" />
     <Compile Include="ICave.cs" />
+    <Compile Include="LocationBusy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
