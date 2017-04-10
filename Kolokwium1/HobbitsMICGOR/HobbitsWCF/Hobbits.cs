@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using ObjectManager.Models;
+using ObjectManager.LiteDB;
 
 namespace HobbitsWCF
 {
@@ -14,7 +15,12 @@ namespace HobbitsWCF
     {
         public int CreatePlayer(string name, string code)
         {
-            throw new NotImplementedException();
+            var repo = new PlayersRepository();
+            return repo.Add(new Player()
+            {
+                Name = name,
+                Code = code
+            });
         }
 
         public int GetPlayer(string name, string code)

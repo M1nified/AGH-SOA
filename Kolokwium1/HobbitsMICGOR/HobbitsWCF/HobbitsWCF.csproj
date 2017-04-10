@@ -52,6 +52,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ObjectManager.LiteDB\ObjectManager.LiteDB.csproj">
+      <Project>{9AE1B1F5-1C8C-4C1B-8EAC-1B318EC24DF3}</Project>
+      <Name>ObjectManager.LiteDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ObjectManager.Models\ObjectManager.Models.csproj">
       <Project>{C0F8D956-6A8F-49F7-B31C-46DD47952E82}</Project>
       <Name>ObjectManager.Models</Name>
