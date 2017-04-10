@@ -31,5 +31,10 @@ namespace HobbitsWCF
         {
             throw new NotImplementedException();
         }
+
+        public Stats SetPlayerStats(string name, Stats stats)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

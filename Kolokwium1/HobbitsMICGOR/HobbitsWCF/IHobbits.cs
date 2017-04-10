@@ -20,6 +20,8 @@ namespace HobbitsWCF
         string GetPlayerName(int id);
         [OperationContract]
         Stats GetPlayerStats(string name);
+        [OperationContract]
+        Stats SetPlayerStats(string name, Stats stats);
     }
 
 }
