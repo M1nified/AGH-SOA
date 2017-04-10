@@ -12,7 +12,7 @@ namespace DragonCaveMICGOR
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
     public class DragonCave : IDragonCave
     {
-        public Treasure GetLoot(int value)
+        public Treasure GetLoot()
         {
             var items = new string[]{ "szata", "bron", "czapka" };
             var tr = new Treasure()

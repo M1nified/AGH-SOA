@@ -97,7 +97,7 @@ namespace GameMICGOR
         {
             if (currentLocation.Center == "zloto")
             {
-
+                var treasure = dragonCave.GetLoot();
             }
             else if (currentLocation.Center == "klucz")
             {

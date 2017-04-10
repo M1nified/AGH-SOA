@@ -95,10 +95,10 @@ namespace GameMICGOR.DragonCaveService1 {
     public interface IDragonCave {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDragonCave/GetLoot", ReplyAction="http://tempuri.org/IDragonCave/GetLootResponse")]
-        GameMICGOR.DragonCaveService1.Treasure GetLoot(int value);
+        GameMICGOR.DragonCaveService1.Treasure GetLoot();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDragonCave/GetLoot", ReplyAction="http://tempuri.org/IDragonCave/GetLootResponse")]
-        System.Threading.Tasks.Task<GameMICGOR.DragonCaveService1.Treasure> GetLootAsync(int value);
+        System.Threading.Tasks.Task<GameMICGOR.DragonCaveService1.Treasure> GetLootAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -128,12 +128,12 @@ namespace GameMICGOR.DragonCaveService1 {
                 base(binding, remoteAddress) {
         }
         
-        public GameMICGOR.DragonCaveService1.Treasure GetLoot(int value) {
-            return base.Channel.GetLoot(value);
+        public GameMICGOR.DragonCaveService1.Treasure GetLoot() {
+            return base.Channel.GetLoot();
         }
         
-        public System.Threading.Tasks.Task<GameMICGOR.DragonCaveService1.Treasure> GetLootAsync(int value) {
-            return base.Channel.GetLootAsync(value);
+        public System.Threading.Tasks.Task<GameMICGOR.DragonCaveService1.Treasure> GetLootAsync() {
+            return base.Channel.GetLootAsync();
         }
     }
 }

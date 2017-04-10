@@ -13,7 +13,7 @@ namespace DragonCaveMICGOR
     public interface IDragonCave
     {
         [OperationContract]
-        Treasure GetLoot(int value);
+        Treasure GetLoot();
     }
 
 }
