@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseConnections.cs" />
-    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\PositionDb.cs" />
     <Compile Include="PostionsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

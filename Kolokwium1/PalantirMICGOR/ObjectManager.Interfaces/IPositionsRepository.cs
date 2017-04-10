@@ -6,9 +6,9 @@ namespace ObjectManager.Interfaces
     public interface IPositionsRepository
     {
         List<Position> GetAll();
-        int Add(Position position);
-        Position Get(int Id);
+        Position Add(Position position);
+        Position Get(string positionName);
         Position Update(Position position);
-        bool Delete(int Id);
+        bool Delete(string positionName);
     }
 }
