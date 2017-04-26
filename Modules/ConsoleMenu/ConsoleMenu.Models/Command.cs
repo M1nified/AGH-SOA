@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleMenu
+namespace ConsoleMenu.Models
 {
     public class Command
     {
